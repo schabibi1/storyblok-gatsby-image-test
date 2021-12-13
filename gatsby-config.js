@@ -32,16 +32,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-storyblok',
+      resolve: require.resolve(`./gatsby-source-storyblok`),
       options: {
         accessToken: '7iwOVEdzTAlQpEotREueWwtt',
         version: 'draft',
-        // dynamicContent: true,
         localAssets: true,
       }
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

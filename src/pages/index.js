@@ -17,8 +17,7 @@ const IndexPage = ({ data, location }) => {
     return (<DynamicComponent blok={blok} key={blok._uid} />)
   })
 
-  const image = getImage(data.file)
-  console.log(data.file)
+  const image = getImage(data.image2)
 
   return (
     <Layout>
@@ -41,12 +40,12 @@ export const query = graphql`
       name
       internalId
     }
-    file {
+    image2: file(name: {eq: "image-2"}) {
       name
       absolutePath
       childImageSharp {
         gatsbyImageData(
-          width: 200
+          width: 300
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
